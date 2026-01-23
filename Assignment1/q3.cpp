@@ -3,6 +3,22 @@
 # include<algorithm>
 using namespace std;
 
+// Time Complexity (Quick Sort):
+// Best Case:    O(n log n)
+// Average Case: O(n log n)
+// Worst Case:   O(n^2)
+//
+// Space Complexity:
+// Best/Average Case: O(log n)  // recursion stack
+// Worst Case:        O(n)
+
+
+// ---------- OUTPUT --------------
+// Unsorted Array
+// 4 2 6 9 2 
+// Sorted Array after Quick Sort
+// 2 2 4 6 9 
+
 int Partition(vector<int>& A, int p, int r){
     int x = A[r];
 
@@ -29,7 +45,7 @@ void QuickSort(vector<int>& A, int l, int r){
     }
 }
 int main(){
-    vector<int> A = {45, 23, 7, 26, 56, 78};
+    vector<int> A = { 4, 2, 6, 9, 2 };
     cout << "Unsorted Array" << endl;
     for(int val : A){
         cout << val << " ";
@@ -40,11 +56,10 @@ int main(){
 
 
 
-    cout << "Sorted Array" << endl;
+    cout << "Sorted Array after Quick Sort" << endl;
     for(int val : A){
         cout << val << " ";
     }
     cout << endl;
 
     return 0;
-}
